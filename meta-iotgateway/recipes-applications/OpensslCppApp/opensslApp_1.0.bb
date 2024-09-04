@@ -7,7 +7,8 @@ SRC_URI = "file://opensslApp.cpp"
 # Modify these as desired
 DEPENDS = "openssl "
 # add debugging information to the binaries
-CXXFLAGS:append = " -g " 
+CXXFLAGS:append = " -g -Wall " 
+TARGET_CC_ARCH += "${LDFLAGS}"
 do_compile(){
     ${CXX} ${CXXFLAGS} ${WORKDIR}/opensslApp.cpp -lcrypto -lssl -o mySslApp
 }
