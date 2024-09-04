@@ -4,11 +4,11 @@ LICENSE = ""
 SRC_URI = "file://opensslApp.cpp"
 
 # Modify these as desired
-S = "${WORKDIR}/source"
 DEPENDS = "openssl "
-
+# add debugging information to the binaries
+CXXFLAGS:append = " -g " 
 do_compile(){
-    ${CXX} ${S}/opensslApp.cpp -lcrypto -lssl -o mySslApp
+    ${CXX} ${CXXFLAGS} ${WORKDIR}/opensslApp.cpp -lcrypto -lssl -o mySslApp
 }
 
 do_install(){
