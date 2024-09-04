@@ -1,6 +1,7 @@
 DESCRIPTION = ""
 HOMEPAGE = ""
-LICENSE = ""
+LICENSE = "CLOSED"
+LIC_FILES_CHKSUM = ""
 SRC_URI = "file://opensslApp.cpp"
 
 # Modify these as desired
